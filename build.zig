@@ -21,7 +21,6 @@ pub fn build(b: *std.build.Builder) void {
         main_tests.lib_paths.append("c:/msys64/mingw64/lib") catch unreachable;
     }
     main_tests.linkSystemLibrary("tensorflowlite-delegate_xnnpack");
-    main_tests.linkSystemLibrary("tensorflowlite_c");
     main_tests.linkSystemLibrary("c");
 
     const test_step = b.step("test", "Run library tests");
